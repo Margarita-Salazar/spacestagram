@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 
 function App() {
-  const [data, setData] = useState({});
-  const [like, setLike] = useState(false);
+  const [data, setData] = useState([]);
+
 
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=2K8UZVJfqs8I7QgzdWde2FXoZWGpwBcBegTpKkP9`)
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=5")
       .then(response => {
         setData(response.data);
       })
@@ -18,18 +18,17 @@ function App() {
 
   }, []);
 
-  const clickFuntion = () => {
-    setLike(!like);
-  };
-
-
   return (
     <div className="App">
       <header className="App-Header">
         <h1>Spacestagram</h1>
         <h4>Brought to by NASA’S Astronomy Picture of the Day API </h4>
       </header>
-      <PhotoCard data={data} like={like} click={clickFuntion} />
+      {data.map(card => {
+        return (
+          <PhotoCard key={card.title} data={card} />
+        );
+      })}
     </div>
   );
 }
