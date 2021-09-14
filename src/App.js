@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className="App-Header">
         <h1>Spacestagram</h1>
         <h4>Brought to by NASA’S Astronomy Picture of the Day API </h4>
       </header>
