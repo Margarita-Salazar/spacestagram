@@ -1,14 +1,15 @@
 import './App.css';
-import PhotoCard from "./PhotoCard";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import PhotoCard from "./PhotoCard";
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 function App() {
   const [data, setData] = useState([]);
 
-
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=5")
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=5`)
       .then(response => {
         setData(response.data);
       })

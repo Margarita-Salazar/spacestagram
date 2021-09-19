@@ -22,6 +22,9 @@ span {
 .ant-card {
   width: 800px;
   font: 16px sans-serif;
+  margin: 5% auto;
+  border: 1px solid lightgray;
+  border-radius: 5px;
 }
 
 .ant-card .ant-card-head-title {
@@ -29,6 +32,15 @@ span {
   font-size: 20px;
 }
 
+.card-svg {
+  font-size: 30px;
+}
+
+.ant-card-meta {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+}
 .ant-card-meta-title {
   margin-bottom: 10px;
 }

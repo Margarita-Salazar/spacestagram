@@ -15,30 +15,19 @@ export default function PhotoCard(props) {
     return (
         <Card
             cover={<img src={data.url} alt="NASA's " width="800px" />}
-            style={{
-                margin: "5% auto",
-                border: "1px solid lightgray",
-                borderRadius: "5px",
-                width: "100 %"
-            }}
             title={data.title}
         >
 
             <HeartFilled
+                className="card-svg"
                 style={{
                     color: like ? "#ff5555" : "#cccccc",
                     marginLeft: "10px",
-                    fontSize: "30px"
                 }}
                 onClick={() => click()}
             />
-            <LinkOutlined style={{ fontSize: "30px" }} />
+            <LinkOutlined className="card-svg" />
             <Meta
-                style={{
-                    padding: "20px",
-                    fontSize: "14px",
-                    lineHeight: 1.8
-                }}
                 title={data.date}
                 description={data.explanation}
             >
