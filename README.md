@@ -22,6 +22,6 @@ npm start
 
 Version: 0.0.1
 
-You can find the deployed project at[Spacetagram](https://spacetagram-nasa-api.netlify.app).
+You can find the deployed project at [Spacetagram](https://spacetagram-nasa-api.netlify.app).
 
 Dependencies: React, axios, @antd
