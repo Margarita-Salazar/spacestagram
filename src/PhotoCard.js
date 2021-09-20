@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card } from "antd";
-import { HeartFilled, LinkOutlined } from '@ant-design/icons';
+import { HeartFilled } from "@ant-design/icons";
 
 const { Meta } = Card;
 
@@ -14,10 +14,9 @@ export default function PhotoCard(props) {
 
     return (
         <Card
-            cover={<img src={data.url} alt="NASA's " width="800px" />}
+            cover={<img src={data.url} alt="NASA's astronomy pic of the day" width="800px" />}
             title={data.title}
         >
-
             <HeartFilled
                 className="card-svg"
                 style={{
@@ -26,7 +25,6 @@ export default function PhotoCard(props) {
                 }}
                 onClick={() => click()}
             />
-            <LinkOutlined className="card-svg" />
             <Meta
                 title={data.date}
                 description={data.explanation}
