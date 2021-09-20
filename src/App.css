@@ -1,23 +1,25 @@
-header {
+body {
+  min-width: fit-content;
+}
+
+.ant-page-header-heading-left {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 30px;
-  margin: 0;
+  padding: 30px 0;
   border-bottom: 1px solid lightgray;
 }
 
-header h1 {
+.ant-page-header-heading-title {
+  margin-left: 30px;
   margin-bottom: 10px;
   font: 36px sans-serif;
 }
 
-h4 {
+.ant-page-header-heading-sub-title {
+  margin-left: 30px;
   font: 18px italic;
   color: darkgray;
-}
-
-span {
-  margin-top: 10px;
-  padding: 10px;
 }
 
 .ant-card {
@@ -35,6 +37,8 @@ span {
 }
 
 .card-svg {
+  padding: 10px;
+  margin: 10px 0 10px 20px;
   font-size: 30px;
 }
 

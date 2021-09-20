@@ -14,7 +14,23 @@ export default function PhotoCard(props) {
 
     return (
         <Card
-            cover={<img src={data.url} alt="NASA's astronomy pic of the day" width="800px" />}
+            cover={
+                data.media_type === "video" ?
+                    <iframe
+                        width="800"
+                        height="480"
+                        src={`${data.url}`}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        title="Embedded youtube"
+                        sameSite="None"
+                    /> :
+                    <img
+                        src={data.url}
+                        alt="NASA's astronomy pic of the day"
+                        width="800px"
+                    />}
             title={data.title}
         >
             <HeartFilled

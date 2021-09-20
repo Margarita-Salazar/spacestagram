@@ -1,7 +1,8 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import PhotoCard from "./PhotoCard";
+import AppHeader from './components/Header';
+import PhotoCard from "./components/PhotoCard";
 
 const API_KEY = process.env.REACT_APP_API_KEY || "DEMO_KEY";
 
@@ -22,12 +23,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-Header">
-        <h1>Spacestagram</h1>
-        <h4>Brought to by NASA’S Astronomy Picture of the Day API </h4>
-      </header>
-
+    <>
+      <AppHeader />
       {loading ?
         <div className="loading">Loading...</div>
         : data.map(card => {
@@ -35,7 +32,7 @@ function App() {
             <PhotoCard key={card.title} data={card} />
           );
         })}
-    </div>
+    </>
   );
 }
 
