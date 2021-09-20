@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import PhotoCard from "./PhotoCard";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY || "DEMO_KEY";
 
 function App() {
   const [data, setData] = useState([]);
