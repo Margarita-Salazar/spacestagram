@@ -6,7 +6,7 @@ export default function AppHeader() {
         <PageHeader
             className="App-Header"
             title="Spacestagram"
-            subTitle="Brought to by NASA’S Astronomy Picture of the Day API"
+            subTitle="Brought to you by NASA’S Astronomy Picture of the Day API"
         />
     );
 }
